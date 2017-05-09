@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <data>
+        <variable
+            name="item"
+            type="cc.tracyzhang.app.tracydemo.Item" />
+
+        <variable
+            name="adapter"
+            type="cc.tracyzhang.app.tracydemo.MainAdapter" />
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@{item.name}"
+            />
+
+    </LinearLayout>
+</layout>

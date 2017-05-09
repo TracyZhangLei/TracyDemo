@@ -1,0 +1,23 @@
+package cc.tracyzhang.app.tracydemo.databinding;
+
+import android.databinding.DataBindingUtil;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+
+import cc.tracyzhang.app.tracydemo.R;
+import cc.tracyzhang.app.tracydemo.databinding.ActivityMainBinding;
+import cc.tracyzhang.app.tracydemo.databinding.User;
+import cc.tracyzhang.app.tracydemo.databinding.model.User;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        ActivityMainBinding bing = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        User user = new User();
+        user.firstName = "tracy";
+        user.lastName = "mcgrady";
+        bing.setUser(user);
+    }
+}
