@@ -12,6 +12,7 @@ import java.util.List;
 
 import cc.tracyzhang.app.tracydemo.applink.AppLinkActivity;
 import cc.tracyzhang.app.tracydemo.applist.AppListActivity;
+import cc.tracyzhang.app.tracydemo.classloader.ClazzLoaderActivity;
 import cc.tracyzhang.app.tracydemo.databinding.DataBindingActivity;
 import cc.tracyzhang.app.tracydemo.databinding.MainListviewItemBinding;
 import cc.tracyzhang.app.tracydemo.dialog.DialogDemoActivity;
@@ -56,6 +57,7 @@ public class MainAdapter extends BaseAdapter{
         data.add(new Item("MemoryLeakWebView", MemoryLeakWebViewActivity.class));
         data.add(new Item("Java8", Java8Activity.class));
         data.add(new Item("RxJava", RxJavaDemo.class));
+        data.add(new Item("ClassLoader", ClazzLoaderActivity.class));
     }
 
     @Override

@@ -1,6 +1,8 @@
 package cc.tracyzhang.app.tracydemo;
 
+
 import android.app.Application;
+import android.util.Log;
 
 import com.jingdong.sdk.permission.PermissionHelper;
 
@@ -10,6 +12,8 @@ import com.jingdong.sdk.permission.PermissionHelper;
  * Description:
  */
 public class DemoApplication extends Application {
+
+    private static final String TAG = "DemoApplication";
 
     private static DemoApplication instance;
 
@@ -22,6 +26,8 @@ public class DemoApplication extends Application {
         super.onCreate();
         instance = this;
         PermissionHelper.install(this);
+
+        Log.d(TAG, "onCreate: "+getExternalCacheDir().getAbsolutePath());
 //        new Thread(new Runnable() {
 //            @Override
 //            public void run() {

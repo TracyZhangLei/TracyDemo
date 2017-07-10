@@ -38,6 +38,7 @@
         </activity>
         <activity android:name=".java8.Java8Activity" />
         <activity android:name=".rxjava.RxJavaDemo" />
+        <activity android:name=".classloader.ClazzLoaderActivity" />
 
         <activity android:name=".applink.AppLinkActivity">
             <intent-filter android:autoVerify="true">
