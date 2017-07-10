@@ -2,7 +2,7 @@ package cc.tracyzhang.app.tracydemo;
 
 import android.app.Application;
 
-import com.alipay.euler.andfix.patch.PatchManager;
+import com.jingdong.sdk.permission.PermissionHelper;
 
 /**
  * User: zhanglei115
@@ -11,27 +11,24 @@ import com.alipay.euler.andfix.patch.PatchManager;
  */
 public class DemoApplication extends Application {
 
-    PatchManager patchManager;
     private static DemoApplication instance;
 
     public static DemoApplication getInstance() {
         return instance;
-    }
-    public PatchManager getPatchManager() {
-        return patchManager;
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
         instance = this;
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                patchManager = new PatchManager(instance);
-                patchManager.init(BuildConfig.VERSION_NAME);
-                patchManager.loadPatch();
-            }
-        }).start();
+        PermissionHelper.install(this);
+//        new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                patchManager = new PatchManager(instance);
+//                patchManager.init(BuildConfig.VERSION_NAME);
+//                patchManager.loadPatch();
+//            }
+//        }).start();
     }
 }

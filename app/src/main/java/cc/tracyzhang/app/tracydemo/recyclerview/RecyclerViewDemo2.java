@@ -89,6 +89,7 @@ public class RecyclerViewDemo2 extends AppCompatActivity {
       if(null != listener){
         listener.onClick(v);
       }
+      Log.w( "Holder: ", getLayoutPosition()+"," + getAdapterPosition());
     }
 
     @Override

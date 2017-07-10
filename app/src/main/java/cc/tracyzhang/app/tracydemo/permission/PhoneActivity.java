@@ -4,15 +4,20 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+
+import com.jingdong.sdk.permission.PermissionHelper;
+import com.jingdong.sdk.permission.PermissionHelper.PermissionResultCallBack;
 
 /**
  * Created by zl on 16-12-23.
  */
 
-public class PhoneActivity extends Activity {
+public class PhoneActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +48,41 @@ public class PhoneActivity extends Activity {
         });
         ll.addView(dial);
 
+        Button external = new Button(this);
+        external.setText("Storage");
+        external.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PermissionHelper.hasGrantedExternalStorage(PhoneActivity.this,
+                    new PermissionResultCallBack() {
+                        @Override
+                        public void onGranted() {
+                            super.onGranted();
+                        }
+
+                        @Override
+                        public void onDenied() {
+                            super.onDenied();
+                        }
+                    });
+            }
+        });
+        ll.addView(external);
+
+
         setContentView(ll);
 
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        PermissionHelper.onRequestPermissionsResult(this,requestCode,permissions,grantResults);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        PermissionHelper.onActivityDestroy();
     }
 }

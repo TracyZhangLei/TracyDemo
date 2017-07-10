@@ -10,7 +10,6 @@ import android.widget.BaseAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-import cc.tracyzhang.app.tracydemo.andfix.AndFixActivity;
 import cc.tracyzhang.app.tracydemo.applink.AppLinkActivity;
 import cc.tracyzhang.app.tracydemo.applist.AppListActivity;
 import cc.tracyzhang.app.tracydemo.databinding.DataBindingActivity;
@@ -23,6 +22,7 @@ import cc.tracyzhang.app.tracydemo.okhttp.OKHttpActivity;
 import cc.tracyzhang.app.tracydemo.permission.PhoneActivity;
 import cc.tracyzhang.app.tracydemo.recyclerview.RecyclerViewDemo;
 import cc.tracyzhang.app.tracydemo.recyclerview.RecyclerViewDemo2;
+import cc.tracyzhang.app.tracydemo.rxjava.RxJavaDemo;
 import cc.tracyzhang.app.tracydemo.tinypng.TinyPngActivity;
 import cc.tracyzhang.app.tracydemo.toolsns.ToolsNSActivity;
 
@@ -43,7 +43,6 @@ public class MainAdapter extends BaseAdapter{
         inflater = LayoutInflater.from(cxt);
         data = new ArrayList<>();
         data.add(new Item("DataBinding", DataBindingActivity.class));
-        data.add(new Item("AndFix", AndFixActivity.class));
         data.add(new Item("ToolsNS", ToolsNSActivity.class));
         data.add(new Item("Dialog", DialogDemoActivity.class));
         data.add(new Item("AppLink", AppLinkActivity.class));
@@ -56,6 +55,7 @@ public class MainAdapter extends BaseAdapter{
         data.add(new Item("AppList", AppListActivity.class));
         data.add(new Item("MemoryLeakWebView", MemoryLeakWebViewActivity.class));
         data.add(new Item("Java8", Java8Activity.class));
+        data.add(new Item("RxJava", RxJavaDemo.class));
     }
 
     @Override
