@@ -2,12 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.3"
-
-//    compileOptions {
-//        sourceCompatibility JavaVersion.VERSION_1_8
-//        targetCompatibility JavaVersion.VERSION_1_8
-//    }
+    buildToolsVersion '25.0.0'
 
     sourceSets {
         main {
@@ -49,4 +44,5 @@ dependencies {
     compile(name:'permission-sdk-release',ext:'aar')
     compile 'com.squareup.okhttp3:okhttp:3.5.0'
     compile "io.reactivex.rxjava2:rxjava:2.1.0"
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
 }
