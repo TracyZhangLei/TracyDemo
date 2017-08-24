@@ -40,6 +40,7 @@
         <activity android:name=".rxjava.RxJavaDemo" />
         <activity android:name=".classloader.ClazzLoaderActivity" />
         <activity android:name=".constraintlayout.ConstraintActivity" />
+        <activity android:name=".looper.LooperActivity" />
 
         <activity android:name=".applink.AppLinkActivity">
             <intent-filter android:autoVerify="true">

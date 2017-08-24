@@ -18,6 +18,7 @@ import cc.tracyzhang.app.tracydemo.databinding.DataBindingActivity;
 import cc.tracyzhang.app.tracydemo.databinding.MainListviewItemBinding;
 import cc.tracyzhang.app.tracydemo.dialog.DialogDemoActivity;
 import cc.tracyzhang.app.tracydemo.java8.Java8Activity;
+import cc.tracyzhang.app.tracydemo.looper.LooperActivity;
 import cc.tracyzhang.app.tracydemo.memory.MemoryActivity;
 import cc.tracyzhang.app.tracydemo.memory.MemoryLeakWebViewActivity;
 import cc.tracyzhang.app.tracydemo.okhttp.OKHttpActivity;
@@ -60,6 +61,7 @@ public class MainAdapter extends BaseAdapter{
         data.add(new Item("RxJava", RxJavaDemo.class));
         data.add(new Item("ClassLoader", ClazzLoaderActivity.class));
         data.add(new Item("ConstraintLayout", ConstraintActivity.class));
+        data.add(new Item("Looper", LooperActivity.class));
     }
 
     @Override
