@@ -10,6 +10,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <application android:name=".DemoApplication"
         android:allowBackup="true"
@@ -41,6 +42,9 @@
         <activity android:name=".classloader.ClazzLoaderActivity" />
         <activity android:name=".constraintlayout.ConstraintActivity" />
         <activity android:name=".looper.LooperActivity" />
+        <activity android:name=".activity.ActivityA" android:launchMode="singleTask"/>
+        <activity android:name=".activity.ActivityB" android:launchMode="singleTask"/>
+        <activity android:name=".activity.ActivityC" />
 
         <activity android:name=".applink.AppLinkActivity">
             <intent-filter android:autoVerify="true">

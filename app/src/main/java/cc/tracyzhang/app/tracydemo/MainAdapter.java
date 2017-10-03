@@ -8,8 +8,10 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
+import cc.tracyzhang.app.tracydemo.activity.ActivityA;
 import cc.tracyzhang.app.tracydemo.applink.AppLinkActivity;
 import cc.tracyzhang.app.tracydemo.applist.AppListActivity;
 import cc.tracyzhang.app.tracydemo.classloader.ClazzLoaderActivity;
@@ -62,6 +64,8 @@ public class MainAdapter extends BaseAdapter{
         data.add(new Item("ClassLoader", ClazzLoaderActivity.class));
         data.add(new Item("ConstraintLayout", ConstraintActivity.class));
         data.add(new Item("Looper", LooperActivity.class));
+        data.add(new Item("Activity", ActivityA.class));
+        Collections.sort(data);
     }
 
     @Override
