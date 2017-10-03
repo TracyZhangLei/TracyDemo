@@ -14,17 +14,10 @@
 
     <application android:name=".DemoApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name="MainActivity"></activity>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity android:name=".databinding.DataBindingActivity" android:label="DataBinding" />
         <activity android:name=".toolsns.ToolsNSActivity" />
         <activity android:name=".dialog.DialogDemoActivity" />
@@ -45,6 +38,7 @@
         <activity android:name=".activity.ActivityA" android:launchMode="singleTask"/>
         <activity android:name=".activity.ActivityB" android:launchMode="singleTask"/>
         <activity android:name=".activity.ActivityC" />
+        <activity android:name=".updateicon.UpdateIcon" />
 
         <activity android:name=".applink.AppLinkActivity">
             <intent-filter android:autoVerify="true">
@@ -55,6 +49,33 @@
                 <data android:scheme="https" android:host="tracyzhang.cc" />
             </intent-filter>
         </activity>
+
+        <activity-alias
+                android:name="cc.tracyzhang.activity.11"
+                android:enabled="true"
+                android:label="11"
+                android:icon="@drawable/i11"
+                android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <activity-alias
+                android:name="cc.tracyzhang.activity.22"
+                android:enabled="false"
+                android:label="22"
+                android:icon="@drawable/i22"
+                android:targetActivity=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
     </application>
 
 </manifest>

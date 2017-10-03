@@ -30,6 +30,7 @@ import cc.tracyzhang.app.tracydemo.recyclerview.RecyclerViewDemo2;
 import cc.tracyzhang.app.tracydemo.rxjava.RxJavaDemo;
 import cc.tracyzhang.app.tracydemo.tinypng.TinyPngActivity;
 import cc.tracyzhang.app.tracydemo.toolsns.ToolsNSActivity;
+import cc.tracyzhang.app.tracydemo.updateicon.UpdateIcon;
 
 /**
  * User: zhanglei115
@@ -65,6 +66,7 @@ public class MainAdapter extends BaseAdapter{
         data.add(new Item("ConstraintLayout", ConstraintActivity.class));
         data.add(new Item("Looper", LooperActivity.class));
         data.add(new Item("Activity", ActivityA.class));
+        data.add(new Item("ActivityAlias", UpdateIcon.class));
         Collections.sort(data);
     }
 
