@@ -14,6 +14,7 @@ import java.util.List;
 import cc.tracyzhang.app.tracydemo.activity.ActivityA;
 import cc.tracyzhang.app.tracydemo.applink.AppLinkActivity;
 import cc.tracyzhang.app.tracydemo.applist.AppListActivity;
+import cc.tracyzhang.app.tracydemo.broadcast.ReceiverActivity;
 import cc.tracyzhang.app.tracydemo.classloader.ClazzLoaderActivity;
 import cc.tracyzhang.app.tracydemo.constraintlayout.ConstraintActivity;
 import cc.tracyzhang.app.tracydemo.databinding.DataBindingActivity;
@@ -67,6 +68,7 @@ public class MainAdapter extends BaseAdapter{
         data.add(new Item("Looper", LooperActivity.class));
         data.add(new Item("Activity", ActivityA.class));
         data.add(new Item("ActivityAlias", UpdateIcon.class));
+        data.add(new Item("BroadcastReceiver", ReceiverActivity.class));
         Collections.sort(data);
     }
 
