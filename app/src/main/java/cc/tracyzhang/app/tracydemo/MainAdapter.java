@@ -20,6 +20,7 @@ import cc.tracyzhang.app.tracydemo.constraintlayout.ConstraintActivity;
 import cc.tracyzhang.app.tracydemo.databinding.DataBindingActivity;
 import cc.tracyzhang.app.tracydemo.databinding.MainListviewItemBinding;
 import cc.tracyzhang.app.tracydemo.dialog.DialogDemoActivity;
+import cc.tracyzhang.app.tracydemo.immersivemode.ImmersiveActivity;
 import cc.tracyzhang.app.tracydemo.java8.Java8Activity;
 import cc.tracyzhang.app.tracydemo.looper.LooperActivity;
 import cc.tracyzhang.app.tracydemo.memory.MemoryActivity;
@@ -69,6 +70,8 @@ public class MainAdapter extends BaseAdapter{
         data.add(new Item("Activity", ActivityA.class));
         data.add(new Item("ActivityAlias", UpdateIcon.class));
         data.add(new Item("BroadcastReceiver", ReceiverActivity.class));
+        data.add(new Item("ImmersiveMode", ImmersiveActivity.class));
+
         Collections.sort(data);
     }
 

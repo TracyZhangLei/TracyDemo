@@ -1,18 +1,18 @@
 package cc.tracyzhang.app.tracydemo;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 /**
  * Created by zl on 17-10-2.
  */
 
-public class BaseActivity extends Activity {
+public class BaseActivity extends AppCompatActivity {
 
-	private static final String TAG = "BaseActivity";
+	protected static final String TAG = "BaseActivity";
 	private String name;
 
 	protected void log(String s){

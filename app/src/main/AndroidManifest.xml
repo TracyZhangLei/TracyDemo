@@ -53,7 +53,7 @@
         <activity-alias
                 android:name="cc.tracyzhang.activity.11"
                 android:enabled="true"
-                android:label="11"
+                android:label="@string/app_name"
                 android:icon="@drawable/i11"
                 android:targetActivity=".MainActivity">
             <intent-filter>
@@ -80,6 +80,8 @@
         <service android:name=".service.Child1Service" android:process=":child1"/>
         <service android:name=".service.Child2Service" android:process=":child2"/>
         <receiver android:name=".broadcast.KillProcessReceiver"></receiver>
+
+        <activity android:name=".immersivemode.ImmersiveActivity" />
 
     </application>
 
