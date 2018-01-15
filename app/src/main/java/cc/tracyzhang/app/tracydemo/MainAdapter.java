@@ -22,6 +22,7 @@ import cc.tracyzhang.app.tracydemo.databinding.MainListviewItemBinding;
 import cc.tracyzhang.app.tracydemo.dialog.DialogDemoActivity;
 import cc.tracyzhang.app.tracydemo.immersivemode.ImmersiveActivity;
 import cc.tracyzhang.app.tracydemo.java8.Java8Activity;
+import cc.tracyzhang.app.tracydemo.kotlin.KtActivity;
 import cc.tracyzhang.app.tracydemo.looper.LooperActivity;
 import cc.tracyzhang.app.tracydemo.memory.MemoryActivity;
 import cc.tracyzhang.app.tracydemo.memory.MemoryLeakWebViewActivity;
@@ -71,6 +72,7 @@ public class MainAdapter extends BaseAdapter{
         data.add(new Item("ActivityAlias", UpdateIcon.class));
         data.add(new Item("BroadcastReceiver", ReceiverActivity.class));
         data.add(new Item("ImmersiveMode", ImmersiveActivity.class));
+        data.add(new Item("Kotlin", KtActivity.class));
 
         Collections.sort(data);
     }
